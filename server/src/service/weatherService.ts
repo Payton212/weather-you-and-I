@@ -97,8 +97,8 @@ class WeatherService {
       const data = await response.json();
       
       const CurrentWeather = this.parseCurrentWeather(data.list[0]);
-
-      const forecast = this.buildForecastArray(CurrentWeather, data.list);
+      const futureWeather = data.list
+      const forecast = this.buildForecastArray(CurrentWeather, futureWeather.slice(1));
       return forecast;
     } catch (err) {
       console.log("Error:", err);
