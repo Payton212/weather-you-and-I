@@ -116,7 +116,7 @@ class WeatherService {
       response.list[0].main.temp,
       response.list[0].wind.speed,
       response.list[0].main.humidity,
-      response.list[0].weather[0].main,
+      response.list[0].weather[0].icon,
       response.list[0].weather[0].description
     );
     return newWeather;
@@ -132,7 +132,7 @@ class WeatherService {
         weather.main.temp,
         weather.wind.speed,
         weather.main.humidity,
-        weather.weather[0].main,
+        weather.weather[0].icon,
         weather.weather[0].description
       );
       forecastArray.push(forecast);
